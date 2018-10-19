@@ -2,16 +2,18 @@
 * @Author: Charlie Gallentine
 * @Date:   2018-10-09 08:22:49
 * @Last Modified by:   Charlie Gallentine
-* @Last Modified time: 2018-10-09 11:33:13
+* @Last Modified time: 2018-10-18 22:06:41
 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
 body {
 	background-image: url(../resources/klapperkop.jpg);
 	background-size: auto 425px;
-	background-position: 0 200px;
 	font-family: Rockwell;
-	margin: 0;
 	overflow: hidden;
-	padding: 0;
 }
 
 a {
@@ -19,15 +21,48 @@ a {
 	text-decoration: none;
 }
 
+#name {
+	padding-left: 15px;
+	position: fixed;
+}
+
+#name > h1{
+	color: #B14B00;
+	font-size: 42px;
+	margin-bottom: -15px;
+}
+
 #navbar {
+	align-items: center;
 	background-color: #D0B3FD;
 	display: flex;
 	height: 50px;
-	margin-top: 200px;
+	justify-content: flex-start;
+	position: fixed;
 	width: 100%;
+	z-index: 1;
 }
 
 .navitem {
-	padding: 0 5px;
-	margin: auto 0;
+	padding-left: 15px;
+	padding-top: 10px;
 }
+
+.navitem > h2 {
+	font-size: 24px;
+}
+
+
+@media screen and (min-width: 420px) {
+	#name > h1{
+		color: #B14B00;
+		font-size: 64px;
+		margin-bottom: -15px;
+	}
+
+	.navitem > h2 {
+		font-size: 32px;
+	}
+}
+
+
