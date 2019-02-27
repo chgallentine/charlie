@@ -2,7 +2,7 @@
 * @Author: Charlie Gallentine
 * @Date:   2018-10-09 08:22:49
 * @Last Modified by:   Charlie Gallentine
-* @Last Modified time: 2018-10-18 22:06:41
+* @Last Modified time: 2019-02-27 16:26:52
 */
 
 * {
@@ -19,6 +19,21 @@ body {
 a {
 	color: #B14B00;
 	text-decoration: none;
+}
+
+p {
+	color: #B14B00;
+	width: 400px;
+	position: fixed;
+	top: 300px;
+	background-color: rgba(240,240,240,0.5);
+	border-radius: 10px;
+	max-width: 95%;
+}
+
+#main {
+	margin: 0 auto;
+	max-width: 900px;
 }
 
 #name {
@@ -43,7 +58,29 @@ a {
 	z-index: 1;
 }
 
+#social {
+	display: none;
+}
+
+#social_links {
+	display: none;
+}
+
+
+.fade-in {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s linear 500ms, opacity 500ms;
+}
+
+.fade-out {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 500ms, opacity 500ms;
+}
+
 .navitem {
+	color: #B14B00;
 	padding-left: 15px;
 	padding-top: 10px;
 }
@@ -52,8 +89,7 @@ a {
 	font-size: 24px;
 }
 
-
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 400px) {
 	#name > h1{
 		color: #B14B00;
 		font-size: 64px;
@@ -62,6 +98,30 @@ a {
 
 	.navitem > h2 {
 		font-size: 32px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	#social {
+		display: flex;
+		flex-direction: column;
+		font-size: 84px;
+		margin-left: 70%;
+		position: fixed;
+	}
+
+	#social_links {
+		display: block;
+	}
+
+	#resume_link {
+		font-size: 48px;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	#social {
+		margin-left: 50%;
 	}
 }
 
